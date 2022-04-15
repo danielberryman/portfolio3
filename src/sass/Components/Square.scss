@@ -1,0 +1,278 @@
+@import "../Common.scss";
+
+.Squares-Container {
+  background-color: rgb(0, 0, 0);
+  display: grid;
+  grid-template-columns: 50%;
+  row-gap: 0;
+  margin: 0 auto;
+  padding-bottom: 75%;
+  width: 75%;
+  position: relative;
+  transform: rotate(-4deg);
+  filter: drop-shadow(0 10px 20px rgb(165, 165, 165));
+  animation: turnSquare 2s ease;
+}
+
+@keyframes turnSquare {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(-4deg);
+  }
+}
+
+.Active-Square-Home,
+.Active-Square-Work,
+.Active-Square-About,
+.Active-Square-Contact {
+  transition: transform 1.5s ease-in-out;
+}
+
+.Active-Square-Home {
+  transform: rotate(-4deg);
+}
+.Active-Square-Work {
+  transform: rotate(86deg);
+}
+.Active-Square-About {
+  transform: rotate(176deg);
+}
+.Active-Square-Contact {
+  transform: rotate(266deg);
+}
+
+.Squares-Container > div {
+  border: none;
+  color: white;
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.Squares-Container > div > h2 {
+  font-size: 1rem;
+}
+
+.Square-Home {
+  background-color: #7dae89;
+  top: 0;
+  left: 0;
+
+  &:hover {
+    background-color: #7dae8998;
+  }
+}
+
+.Square-Work {
+  background-color: #b4746d;
+  top: 50%;
+  left: 0;
+
+  &:hover {
+    background-color: #b4746d98;
+  }
+  > h2 {
+    transform: rotate(-90deg);
+  }
+}
+
+.Square-About {
+  background-color: #58636c;
+  top: 50%;
+  left: 50%;
+
+  &:hover {
+    background-color: #58636c98;
+  }
+
+  > h2 {
+    transform: rotate(180deg);
+  }
+}
+
+.Square-Contact {
+  background-color: #dabfa7;
+  top: 0;
+  left: 50%;
+
+  &:hover {
+    background-color: #dabfa798;
+  }
+  > h2 {
+    transform: rotate(90deg);
+  }
+}
+
+.Square-Container > div > h2 {
+  // grid-area: 1 / 1 / 2 / 2;
+}
+
+.Square-Container > div > h2 {
+  // grid-area: 1 / 1 / 2 / 2;
+}
+
+.Square {
+  background-color: black;
+  content: "";
+  display: block;
+  // display: grid;
+  // height: 100%;
+  // grid-template-columns: 100%;
+  // grid-template-rows: 40% 20% 40%;
+  // align-items: center;
+  // filter: drop-shadow(0 10px 20px rgb(165, 165, 165));
+  // animation: fadeInAndTurn 3s;
+}
+
+.Square__Logo__bg,
+.Square__Logo {
+  border-radius: 50%;
+  width: 8vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Square__Logo__bg {
+  height: 8vh;
+  background-color: white;
+}
+
+.Square__Logo {
+  border: 1px solid white;
+  opacity: 75%;
+  z-index: 1;
+  filter: brightness(1.25);
+}
+
+.Square__Title {
+  font-size: 6vh;
+  line-height: 6.5vh;
+  padding-top: 5vh;
+  text-align: center;
+}
+
+.Square-Nav {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.Square-Nav__btn {
+  @include Button__No-Style;
+  border: 1px solid white;
+  border-radius: 5%;
+  color: white;
+  font-size: 3vh;
+  margin: 0 5vh;
+  padding: 0.25vh 2vh 0.5vh 2vh;
+
+  &:hover {
+    background-color: white;
+    color: #18a86a;
+    transition: all 0.2s linear;
+  }
+}
+
+.Square-Nav__btn__Work {
+}
+
+.Square-Nav__btn__About {
+  float: right;
+}
+
+.Work-Btn__Active {
+  transform: rotate(-25deg);
+  transition: transform 1.5s ease-in-out;
+}
+
+.About-Btn__Active {
+  transform: rotate(25deg);
+  transition: transform 1.5s ease-in-out;
+}
+
+.Square-Nav__btn__Active {
+  background-color: white;
+  color: #18a86a;
+}
+
+.Square-Desc {
+  padding-bottom: 11vh;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.Square-Desc__Title {
+  font-size: 4vh;
+}
+
+.Square-Desc__Quote {
+  font-size: 2vh;
+  margin: 0 auto;
+  width: 60%;
+}
+
+// @media screen and (min-width: 280px) {
+//   .Square-Container {
+//     height: 280px;
+//     width: 280px;
+//   }
+// }
+
+// @media screen and (min-width: 350px) {
+//   .Square-Container {
+//     height: 320px;
+//     width: 320px;
+//   }
+// }
+
+// @media screen and (min-width: 400px) {
+//   .Square-Container {
+//     height: 350px;
+//     width: 350px;
+//   }
+// }
+
+// @media screen and (min-width: 600px) {
+//   .col {
+//     width: 50%;
+//   }
+// }
+
+// @media screen and (min-width: 720px) {
+// }
+
+@media screen and (min-width: 900px) {
+  .Squares-Container {
+    padding-bottom: 40%;
+    width: 40%;
+  }
+
+  .Squares-Container > div > h2 {
+    font-size: 1.4rem;
+  }
+}
+
+// @media screen and (min-width: 1024px) {
+//   .col {
+//     width: 25%;
+//   }
+// }
+
+// @media screen and (min-width: 1300px) {
+//   .col {
+//     width: 20%;
+//   }
+// }
+
+// @media screen and (min-width: 1550px) {
+//   .col {
+//     width: 16.66%;
+//   }
+// }

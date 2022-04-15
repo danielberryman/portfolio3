@@ -36,7 +36,7 @@ function Welcome(props) {
   return (
     <div id="welcome" className="Welcome-Container">
       {/* onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} */}
-      {/* <div className={`child circle ${opacity}`}></div> */}
+      {/* <div className={`child Square ${opacity}`}></div> */}
       {/* <img className={`child img ${props.timeOfDay}`} src={logo} alt="headshot" /> */}
       <img className="Welcome-Container__img" src={logo} alt="headshot" />
     </div>
