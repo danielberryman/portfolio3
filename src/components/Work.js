@@ -21,7 +21,7 @@ const projects = [
     title: "The Beltbook",
     description: `Before I started programming I was a theatre professional. On this project I 
       teamed up with my voice teacher to create an app that allows theatre students, teachers, 
-      and professionals to find and categorize new music they want to work on.`,
+      and professionals to find and categorize music.`,
     tech: "React, Node/Express, MySQL"
   },
   {
