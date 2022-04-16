@@ -2,12 +2,18 @@
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%;
+  z-index: 1;
 }
 
 .navbar-brand > img {
+  background-color: black;
   border-radius: 50%;
   display: inline;
   height: 36px;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .navbar-title-sm {
@@ -55,27 +61,27 @@
 .nav-item-about:hover {
   background-color: #58636c;
 }
-.nav-item-contact:hover {
+.nav-item-connect:hover {
   background-color: #dabfa7;
 }
 
-.nav-home-active,
-.nav-work-active,
-.nav-about-active,
-.nav-contact-active {
+.active-nav-home,
+.active-nav-work,
+.active-nav-about,
+.active-nav-connect {
   color: white;
 }
 
-.nav-home-active {
+.active-nav-home {
   background-color: #7dae89;
 }
-.nav-work-active {
+.active-nav-work {
   background-color: #b4746d;
 }
-.nav-about-active {
+.active-nav-about {
   background-color: #58636c;
 }
-.nav-contact-active {
+.active-nav-connect {
   background-color: #dabfa7;
 }
 

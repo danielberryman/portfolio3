@@ -1,71 +1,80 @@
 import './App.css';
 import Square from './components/Square';
 import Nav from './components/Nav';
+import React, { useState } from 'react';
+import Work from './components/Work';
+import About from './components/About';
+import Connect from './components/Connect';
 
-const activeSquareClasses = [
-  "Active-Square-Home",
-  "Active-Square-Work",
-  "Active-Square-About",
-  "Active-Square-Contact"
-];
+const squares = {
+  "home": {
+    sqrId: "square-home",
+    navId: "nav-home",
+    name: "home",
+    navStyleKlass: "active-nav-home",
+    squareStyleKlass: "active-square-home",
+  },
+  "work": {
+    sqrId: "square-work",
+    navId: "nav-work",
+    name: "work",
+    navStyleKlass: "active-nav-work",
+    squareStyleKlass: "active-square-work",
+  },
+  "about": {
+    sqrId: "square-about",
+    navId: "nav-about",
+    name: "about",
+    navStyleKlass: "active-nav-about",
+    squareStyleKlass: "active-square-about",
+  },
+  "connect": {
+    sqrId: "square-connect",
+    navId: "nav-connect",
+    name: "connect",
+    navStyleKlass: "active-nav-connect",
+    squareStyleKlass: "active-square-connect",
+  },
+};
 
 function App() {
-  function turn(sqr) {
-    const c = document.getElementById("big-square").classList;
+  const [activeSquareName, setActiveSquareName] = useState("home");
 
-    let squareClassToAdd = "";
-    const activeSquareClass = getActiveSquareClass(c);
+  function handleActiveSquare(clickedSquareName) {
+    const bigSquareClasses = document.getElementById("square").classList;
+    const navLinkToActivate = document.getElementById(squares[clickedSquareName].navId).classList;
+    console.log("nav link to activate id: ", squares[clickedSquareName].navId);
 
-    switch (sqr) {
-      case 0:
-        squareClassToAdd = "Active-Square-Home";
-        break;
-      case 1:
-        squareClassToAdd = "Active-Square-Work";
-        break;
-      case 2:
-        squareClassToAdd = "Active-Square-About";
-        break;
-      case 3:
-        squareClassToAdd = "Active-Square-Contact";
-        break;
-      default:
-        break;
+    if (squares[activeSquareName] !== squares[clickedSquareName]) {
+      console.log("Active nav link id: ", squares[activeSquareName].navId);
+      const activeNavLink = document.getElementById(squares[activeSquareName].navId).classList;
+
+      bigSquareClasses.remove(squares[activeSquareName].squareStyleKlass);
+      activeNavLink.remove(squares[activeSquareName].navStyleKlass);
+      bigSquareClasses.add(squares[clickedSquareName].squareStyleKlass);
+      navLinkToActivate.add(squares[clickedSquareName].navStyleKlass);
     }
 
-    const sqrClassToAddName = squareClassToAdd.slice(14).toLowerCase();
-    const navLinkToActivate = document.getElementById(`nav-${sqrClassToAddName}`).classList;
-
-    if (!activeSquareClass) {
-      c.add(squareClassToAdd);
-      navLinkToActivate.add(`nav-${sqrClassToAddName}-active`);
-    } else if (activeSquareClass !== squareClassToAdd) {
-      const activeSqrName = activeSquareClass.slice(14).toLowerCase();
-      const activeNavLink = document.getElementById(`nav-${activeSqrName}`).classList;
-      c.remove(activeSquareClass);
-      activeNavLink.remove(`nav-${activeSqrName}-active`);
-      c.add(squareClassToAdd);
-      navLinkToActivate.add(`nav-${sqrClassToAddName}-active`);
-    }
-  }
-
-  function getActiveSquareClass(el) {
-    for (let c of activeSquareClasses) {
-      if (el.contains(c)) {
-        return c;
-      }
-    }
-    return "";
+    setActiveSquareName(clickedSquareName)
   }
 
   return (
     <main className="App">
-      <Nav handleNavLink={turn} />
+      <Nav handleActiveNavLink={handleActiveSquare} />
       <header className="Root-Header">
         <h1>DANIEL BERRYMAN</h1>
-        <h2>Full Stack Developer</h2>
+        <h3>Full Stack Developer</h3>
       </header>
-      <Square turn={turn} />
+      <Square handleActiveSquare={handleActiveSquare} />
+      {activeSquareName === "work" &&
+        <Work />
+      }
+      {activeSquareName === "about" &&
+        <About />
+      }
+      {activeSquareName === "connect" &&
+        <Connect />
+      }
     </main>
   );
 }

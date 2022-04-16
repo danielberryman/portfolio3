@@ -1,0 +1,16 @@
+.card {
+  background: transparent;
+  border: none;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  column-gap: 4%;
+  grid-template-rows: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .card {
+    grid-template-columns: 19% 59% 19%;
+    column-gap: 3%;
+  }
+}
