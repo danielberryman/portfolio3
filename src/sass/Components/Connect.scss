@@ -1,0 +1,30 @@
+.connect-container {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+}
+
+.connect-container > i {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .connect-container {
+    background: transparent;
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 10%;
+    width: 40%;
+    top: 0;
+    left: 0;
+    text-align: left;
+  }
+
+  .connect-container > i {
+    display: inline;
+    margin: 0 20px;
+  }
+}

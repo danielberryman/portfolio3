@@ -1,3 +1,5 @@
+@use "../colors" as c;
+
 .container-fluid {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -53,16 +55,25 @@
 }
 
 .nav-item-home:hover {
-  background-color: #7dae89;
+  background-color: c.$base-green;
 }
 .nav-item-work:hover {
-  background-color: #b4746d;
+  background-color: c.$base-red;
 }
 .nav-item-about:hover {
-  background-color: #58636c;
+  background-color: c.$base-black;
 }
 .nav-item-connect:hover {
-  background-color: #dabfa7;
+  background-color: c.$base-beige;
+}
+
+.nav-item-resume > i {
+  margin-left: 5px;
+}
+
+.nav-item-resume:hover {
+  border: 1px solid c.$base-black;
+  color: c.$base-black;
 }
 
 .active-nav-home,
@@ -73,16 +84,16 @@
 }
 
 .active-nav-home {
-  background-color: #7dae89;
+  background-color: c.$base-green;
 }
 .active-nav-work {
-  background-color: #b4746d;
+  background-color: c.$base-red;
 }
 .active-nav-about {
-  background-color: #58636c;
+  background-color: c.$base-black;
 }
 .active-nav-connect {
-  background-color: #dabfa7;
+  background-color: c.$base-beige;
 }
 
 @media screen and (min-width: 350px) {

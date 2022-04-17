@@ -67,6 +67,15 @@
   background-color: #dabfa7;
 }
 
+.nav-item-resume > i {
+  margin-left: 5px;
+}
+
+.nav-item-resume:hover {
+  border: 1px solid #58636c;
+  color: #58636c;
+}
+
 .active-nav-home,
 .active-nav-work,
 .active-nav-about,

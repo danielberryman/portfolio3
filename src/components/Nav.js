@@ -2,6 +2,10 @@ import "../css/Components/Nav.css"
 import logo from "../assets/test2.png"
 
 const Nav = (props) => {
+  function downloadResume() {
+
+  }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-style">
       <div className="container-fluid">
@@ -24,6 +28,9 @@ const Nav = (props) => {
             </li>
             <li id="nav-connect" className="nav-item nav-item-connect ms-2 me-2" onClick={() => { props.handleActiveNavLink("connect") }}>
               Connect
+            </li>
+            <li id="nav-resume" className="nav-item nav-item-resume ms-2 me-2" onClick={downloadResume}>
+              Resume<i class="bi bi-file-earmark-arrow-down"></i>
             </li>
           </ul>
         </div>

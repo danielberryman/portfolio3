@@ -1,3 +1,4 @@
+@use "../colors" as c;
 @import "../Common.scss";
 
 .squares-container {
@@ -6,9 +7,9 @@
   grid-template-columns: 50%;
   row-gap: 0;
   margin: 0 auto;
-  margin-bottom: 100px;
-  padding-bottom: 75%;
-  width: 75%;
+  margin-bottom: 80px;
+  padding-bottom: 65%;
+  width: 65%;
   position: relative;
   transform: rotate(-4deg);
   filter: drop-shadow(0 10px 20px rgb(165, 165, 165));
@@ -59,7 +60,7 @@
 }
 
 .square-home {
-  background-color: #7dae89;
+  background-color: c.$base-green;
   top: 0;
   left: 0;
 
@@ -69,7 +70,7 @@
 }
 
 .square-work {
-  background-color: #b4746d;
+  background-color: c.$base-red;
   top: 50%;
   left: 0;
 
@@ -77,12 +78,12 @@
     background-color: #b4746d98;
   }
   > h2 {
-    transform: rotate(-90deg);
+    transform: translateY(4px) rotate(-90deg);
   }
 }
 
 .square-about {
-  background-color: #58636c;
+  background-color: c.$base-black;
   top: 50%;
   left: 50%;
 
@@ -96,7 +97,7 @@
 }
 
 .square-connect {
-  background-color: #dabfa7;
+  background-color: c.$base-beige;
   top: 0;
   left: 50%;
 
@@ -104,16 +105,8 @@
     background-color: #dabfa798;
   }
   > h2 {
-    transform: rotate(90deg);
+    transform: translateY(4px) rotate(90deg);
   }
-}
-
-.square-container > div > h2 {
-  // grid-area: 1 / 1 / 2 / 2;
-}
-
-.square-container > div > h2 {
-  // grid-area: 1 / 1 / 2 / 2;
 }
 
 .square {
@@ -153,7 +146,6 @@
 
 @media screen and (min-width: 992px) {
   .squares-container {
-    position: sticky;
     top: 0;
     padding-bottom: 30%;
     width: 30%;
