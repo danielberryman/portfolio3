@@ -2,8 +2,6 @@
   position: relative;
   margin: 0 auto;
   width: 90%;
-  overflow-y: auto;
-  max-height: 60%;
 }
 
 .work-container-content {
@@ -48,6 +46,12 @@
   font-size: 1rem;
 }
 
+@media screen and (max-width: 300px) {
+  .work-item-content > h4 {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+}
 @media screen and (min-width: 992px) {
   .work-container {
     background: transparent;
@@ -57,6 +61,8 @@
     width: 40%;
     top: 0;
     left: 0;
+    overflow-y: auto;
+    max-height: 60%;
   }
 
   .work-container-content {

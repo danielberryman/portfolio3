@@ -61,20 +61,23 @@ function App() {
   return (
     <main className="App">
       <Nav handleActiveNavLink={handleActiveSquare} />
-      <header className="Root-Header">
-        <h1>DANIEL BERRYMAN</h1>
-        <h3>Full Stack Developer</h3>
-      </header>
-      <Square handleActiveSquare={handleActiveSquare} />
-      {activeSquareName === "work" &&
-        <Work />
-      }
-      {activeSquareName === "about" &&
-        <About />
-      }
-      {activeSquareName === "connect" &&
-        <Connect />
-      }
+      <div>
+        <header className="Root-Header">
+          <h1>DANIEL BERRYMAN</h1>
+          <h3>Full Stack Developer</h3>
+        </header>
+        <Square handleActiveSquare={handleActiveSquare} />
+        {activeSquareName === "work" &&
+          <Work />
+        }
+        {activeSquareName === "about" &&
+          <About />
+        }
+        {activeSquareName === "connect" &&
+          <Connect />
+        }
+      </div>
+      <footer>© 2022 Daniel Berryman. ALL RIGHTS RESERVED</footer>
     </main>
   );
 }

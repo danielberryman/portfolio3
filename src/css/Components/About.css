@@ -1,1 +1,42 @@
+.about-container {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  text-align: left;
+}
 
+.about-imgs {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  column-gap: 4%;
+}
+
+.about-img {
+  background: black;
+  opacity: 0.6;
+  width: 100%;
+}
+.about-img:hover {
+  opacity: 1;
+}
+
+.about-img-active {
+  opacity: 1;
+}
+
+@media screen and (min-width: 992px) {
+  .about-container {
+    background: transparent;
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 10%;
+    width: 40%;
+    top: 0;
+    left: 0;
+  }
+
+  .about-imgs {
+    grid-template-columns: 32% 32% 32%;
+    column-gap: 1.33%;
+  }
+}

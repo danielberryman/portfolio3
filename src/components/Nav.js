@@ -30,7 +30,7 @@ const Nav = (props) => {
               Connect
             </li>
             <li id="nav-resume" className="nav-item nav-item-resume ms-2 me-2" onClick={downloadResume}>
-              Resume<i class="bi bi-file-earmark-arrow-down"></i>
+              Resume<i className="bi bi-file-earmark-arrow-down"></i>
             </li>
           </ul>
         </div>

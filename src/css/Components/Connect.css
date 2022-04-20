@@ -2,13 +2,23 @@
   position: relative;
   margin: 0 auto;
   width: 90%;
+  text-align: left;
+}
+
+.connect-container > div {
   text-align: center;
 }
 
-.connect-container > i {
-  display: block;
+.connect-container > div > a {
   font-size: 3rem;
-  margin-bottom: 10px;
+  margin: 0 20px 10px 20px;
+}
+
+.connect-container > div > a > i {
+  color: #58636c;
+}
+.connect-container > div > a > i:hover {
+  color: rgb(54, 54, 54);
 }
 
 @media screen and (min-width: 992px) {
@@ -20,11 +30,9 @@
     width: 40%;
     top: 0;
     left: 0;
-    text-align: left;
   }
 
-  .connect-container > i {
-    display: inline;
+  .connect-container > a {
     margin: 0 20px;
   }
 }
