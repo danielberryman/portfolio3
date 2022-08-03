@@ -3,6 +3,15 @@
   margin: 0 auto;
   width: 90%;
   text-align: left;
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2s;
+  /* Internet Explorer */
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 */
+  animation: fadein 2s;
 }
 
 .about-imgs {
@@ -15,6 +24,7 @@
   background: black;
   opacity: 0.6;
   width: 100%;
+  cursor: pointer;
 }
 .about-img:hover {
   opacity: 1;

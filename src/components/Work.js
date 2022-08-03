@@ -23,7 +23,8 @@ const projects = [
     description: `Before I started programming I was a theatre professional. On this project I 
       teamed up with my voice teacher to create an app that allows theatre students, teachers, 
       and professionals to find and categorize music.`,
-    tech: "React, Node/Express, MySQL"
+    tech: "React, Node/Express, MySQL",
+    link: "https://beltbook.vercel.app/"
   },
   {
     img: jsdates,
@@ -32,6 +33,7 @@ const projects = [
       It will then ask you what year, month, date, and hour will be returned 
       when local methods or UTC methods are called on the Date object.`,
     tech: "HTML, CSS, JavaScript",
+    link: "https://danielberryman.github.io/jsdates/"
   },
   {
     img: groupby,
@@ -39,19 +41,22 @@ const projects = [
     description: `I needed to implement a group by feature utilizing Angular Material tables for work
      so I decided to do a simple example to have for the future in case I need to implemenet 
      a group by feature again.`,
-    tech: "Angular, Angular Material UI Component Library"
+    tech: "Angular, Angular Material UI Component Library",
+    link: "https://danielberryman.github.io/angular-mat-groupby/"
   },
   {
     img: danielscards,
     title: "Daniel's Cards",
     description: "Quick 1 Page UI for a card business idea I had.",
-    tech: "HTML, CSS, JavaScript"
+    tech: "HTML, CSS, JavaScript",
+    link: "https://danielberryman.github.io/daniels-cards/"
   },
   {
     img: tictactoe,
     title: "Tic Tac Toe Game",
     description: "Little Tic Tac Toe game I made to for practice.",
-    tech: "HTML, CSS, JavaScript"
+    tech: "HTML, CSS, JavaScript",
+    link: "https://danielberryman.github.io/tic-tac-toe/"
   },
 ]
 
@@ -59,17 +64,22 @@ const Work = (props) => {
   let projectNum = 1;
 
   return (
-    <section className="work-container">
+    <section className="work-container fadeIn">
       <div className="work-container-content">
         {projects.map(project => {
-          return <div className={`work-item work-item-${projectNum++}`}>
-            <img src={project.img} alt={project.title} className="work-img" />
-            <div className="work-item-content">
-              <h4 className="work-title">{project.title}</h4>
-              <h5>{project.tech}</h5>
-              <p>{project.description}</p>
+          const imgClass = projectNum === 1 ? "work-img-no-hover" : "work-img"
+          return (
+            <div key={`${project.title}-${projectNum}`} className={`work-item work-item-${projectNum++}`}>
+              <a href={project.link} target="blank">
+                <img src={project.img} alt={project.title} className={imgClass} />
+              </a>
+              <div className="work-item-content">
+                <h4 className="work-title">{project.title}</h4>
+                <h5>{project.tech}</h5>
+                <p>{project.description}</p>
+              </div>
             </div>
-          </div>
+          )
         })}
       </div>
     </section>

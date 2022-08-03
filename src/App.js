@@ -43,10 +43,8 @@ function App() {
   function handleActiveSquare(clickedSquareName) {
     const bigSquareClasses = document.getElementById("square").classList;
     const navLinkToActivate = document.getElementById(squares[clickedSquareName].navId).classList;
-    console.log("nav link to activate id: ", squares[clickedSquareName].navId);
 
     if (squares[activeSquareName] !== squares[clickedSquareName]) {
-      console.log("Active nav link id: ", squares[activeSquareName].navId);
       const activeNavLink = document.getElementById(squares[activeSquareName].navId).classList;
 
       bigSquareClasses.remove(squares[activeSquareName].squareStyleKlass);

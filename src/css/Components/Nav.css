@@ -45,6 +45,7 @@
   margin-top: 5px;
   text-align: right;
   width: 100%;
+  cursor: pointer;
 }
 
 .nav-item:hover {

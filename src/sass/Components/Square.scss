@@ -15,6 +15,7 @@
   filter: drop-shadow(0 10px 20px rgb(165, 165, 165));
   animation: turnSquare 2s ease;
   z-index: 1;
+  cursor: pointer;
 }
 
 @keyframes turnSquare {
