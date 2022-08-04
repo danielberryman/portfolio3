@@ -11,7 +11,7 @@
   padding-bottom: 65%;
   width: 65%;
   position: relative;
-  transform: rotate(-4deg);
+  // transform: rotate(-4deg);
   filter: drop-shadow(0 10px 20px rgb(165, 165, 165));
   animation: turnSquare 2s ease;
   z-index: 1;
@@ -23,7 +23,7 @@
     transform: rotate(90deg);
   }
   to {
-    transform: rotate(-4deg);
+    transform: rotate(0deg);
   }
 }
 
@@ -35,13 +35,13 @@
 }
 
 .active-square-work {
-  transform: rotate(86deg);
+  transform: rotate(90deg);
 }
 .active-square-about {
-  transform: rotate(176deg);
+  transform: rotate(180deg);
 }
 .active-square-connect {
-  transform: rotate(266deg);
+  transform: rotate(270deg);
 }
 
 .squares-container > div {
@@ -79,7 +79,7 @@
     background-color: #b4746d98;
   }
   > h2 {
-    transform: translateY(4px) rotate(-90deg);
+    transform: rotate(-90deg);
   }
 }
 
@@ -106,7 +106,7 @@
     background-color: #dabfa798;
   }
   > h2 {
-    transform: translateY(4px) rotate(90deg);
+    transform: rotate(90deg);
   }
 }
 
@@ -114,36 +114,7 @@
   background-color: black;
   content: "";
   display: block;
-  // display: grid;
-  // height: 100%;
-  // grid-template-columns: 100%;
-  // grid-template-rows: 40% 20% 40%;
-  // align-items: center;
-  // filter: drop-shadow(0 10px 20px rgb(165, 165, 165));
-  // animation: fadeInAndTurn 3s;
 }
-
-// .Square__Logo__bg,
-// .Square__Logo {
-//   border-radius: 50%;
-//   width: 8vh;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
-
-// .Square__Logo__bg {
-//   height: 8vh;
-//   background-color: white;
-// }
-
-// .Square__Logo {
-//   border: 1px solid white;
-//   opacity: 75%;
-//   z-index: 1;
-//   filter: brightness(1.25);
-// }
 
 @media screen and (min-width: 992px) {
   .squares-container {
@@ -157,12 +128,12 @@
   }
 
   .active-square-work {
-    transform: translateX(75%) rotate(86deg);
+    transform: translateX(75%) rotate(90deg);
   }
   .active-square-about {
-    transform: translateX(75%) rotate(176deg);
+    transform: translateX(75%) rotate(180deg);
   }
   .active-square-connect {
-    transform: translateX(75%) rotate(266deg);
+    transform: translateX(75%) rotate(270deg);
   }
 }
