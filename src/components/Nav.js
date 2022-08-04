@@ -1,5 +1,5 @@
 import "../css/Components/Nav.css"
-import logo from "../assets/test2.png"
+import logo from "../assets/test2.webp"
 
 const Nav = (props) => {
   function downloadResume() {

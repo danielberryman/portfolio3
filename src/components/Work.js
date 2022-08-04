@@ -1,11 +1,11 @@
 import React from 'react';
 import "../css/Components/Work.css"
-import beltbook from "../assets/beltbook.jpeg";
-import jsdates from "../assets/jsdates.png";
-import danielscards from "../assets/danielscards.png";
-import herffjones from "../assets/herffjones.png";
-import groupby from "../assets/groupby.png";
-import tictactoe from "../assets/tictactoe.png";
+import beltbook from "../assets/beltbook.webp";
+import jsdates from "../assets/jsdates.webp";
+import danielscards from "../assets/danielscards.webp";
+import herffjones from "../assets/herffjones.webp";
+import groupby from "../assets/groupby.webp";
+import tictactoe from "../assets/tictactoe.webp";
 
 const projects = [
   {

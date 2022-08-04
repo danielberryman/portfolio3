@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../css/Components/About.css";
-import family from "../assets/family.png";
-import music from "../assets/music.png";
+import family from "../assets/family.webp";
+import music from "../assets/music.webp";
 
 const familyImg = {
   title: "Family",

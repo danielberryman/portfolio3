@@ -1,6 +1,6 @@
 import '../App.css';
 import '../css/Components/Welcome.css';
-import logo from '../assets/test2.png';
+import logo from '../assets/test2.webp';
 // import { useNavigate } from 'react-router-dom';
 
 function Welcome(props) {
