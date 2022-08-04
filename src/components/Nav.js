@@ -2,10 +2,6 @@ import "../css/Components/Nav.css"
 import logo from "../assets/test2.webp"
 
 const Nav = (props) => {
-  function downloadResume() {
-
-  }
-
   return (
     <nav className="navbar navbar-expand-lg navbar-style">
       <div className="container-fluid">
@@ -29,9 +25,11 @@ const Nav = (props) => {
             <li id="nav-connect" className="nav-item nav-item-connect ms-2 me-2" onClick={() => { props.handleActiveNavLink("connect") }}>
               Connect
             </li>
-            <li id="nav-resume" className="nav-item nav-item-resume ms-2 me-2" onClick={downloadResume}>
-              Resume<i className="bi bi-file-earmark-arrow-down"></i>
-            </li>
+            <a href="https://drive.google.com/file/d/1xUlsX_bo9fF1cj7CF3_3vAQFtPW5gAfb/view?usp=sharing" download>
+              <li id="nav-resume" className="nav-item nav-item-resume ms-2 me-2">
+                Resume<i className="bi bi-file-earmark-arrow-down"></i>
+              </li>
+            </a>
           </ul>
         </div>
       </div>
