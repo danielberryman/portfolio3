@@ -5,6 +5,10 @@
   z-index: 1;
 }
 
+.nav-logo {
+  cursor: pointer;
+}
+
 .navbar-brand > img {
   background-color: black;
   border-radius: 50%;
@@ -98,6 +102,10 @@
 
 .active-nav-connect {
   background-color: #dabfa7;
+}
+
+.resume-download {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 350px) {
